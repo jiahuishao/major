@@ -1,3 +1,3 @@
 # major
-httpforyou 前端必须懂得http协议
-semantization h5新增语义化标签
+- `httpforyou.md` 前端必须懂得http协议
+- `semantization.md` h5新增语义化标签
