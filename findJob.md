@@ -87,3 +87,12 @@ parseFloat();
 <div id="divright" style="float:right;width:100px;height:100px;background:blue;">right</div>
 <div id="center" style="height:100px;background:yellow" >center</div>
 ```
+
+# 2019.04.11 硕电
+------
+1.new操作符
+    
+    1.声明一个中间对象
+    2.将该中间对象的proto指向构造函数的原型
+    3.将构造函数的this通过apply指向中间对象
+    4.返回该中间对象,也就是返回了实例对象
