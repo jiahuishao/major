@@ -1,3 +1,29 @@
+# 2019.04.-- 悦玩
+-----
+1.vue生命周期
+
+    vue的生命周期共有八个节点，分别为
+    beforecreate    创建前
+    created     创建
+    beforemount     挂载前
+    mounted     挂载
+    beforeupdate    更新前
+    updated     更新
+    beforedestory   销毁前
+    destoryed   销毁
+
+2.css选择器有
+
+    兄弟选择器 + ~
+    后代选择器  >
+    类选择器 .
+    标签选择器 body
+    伪类选择器 ::after
+    继承选择器 
+    id选择器 #
+    通配选择器 *
+    属性选择器 
+
 # 2019.04.08 大名
 -----
 1.
@@ -96,3 +122,22 @@ parseFloat();
     2.将该中间对象的proto指向构造函数的原型
     3.将构造函数的this通过apply指向中间对象
     4.返回该中间对象,也就是返回了实例对象
+    
+# 2019.04.28 全人健康
+-----
+1.在jQuery中，$符如何定义
+
+    $符为jq为select
+    
+# 2019.05.05 文谷（前）
+------
+1.webpack配置文件webpack.congfig.js的各项属性
+
+    devtools：打包模式
+    entry：入口文件
+    ouput：出口文件
+    module：编译所需依赖
+    module-rules-test：匹配文件名称
+    module-rules-use-loader：所用依赖
+    resolve-alias：路径指代
+    devServer：本地服务器设置
