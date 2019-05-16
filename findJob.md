@@ -1,5 +1,5 @@
 # 2019.04.-- 悦玩
------
+
 1.vue生命周期
 
     vue的生命周期共有八个节点，分别为
@@ -25,7 +25,7 @@
     属性选择器 
 
 # 2019.04.08 大名
------
+
 1.
 ```js
 for(var i=0;i<5;++i){
@@ -74,7 +74,7 @@ parseFloat();
     而js文件我们则放在底部，防止整张页面空白时间过长。    
 
 # 2019.04.10 天正
------
+
 1.节点的复制,粘贴,创建,添加,转移,删除
 
     复制节点 - cloneNode 
@@ -115,7 +115,6 @@ parseFloat();
 ```
 
 # 2019.04.11 硕电
-------
 1.new操作符
     
     1.声明一个中间对象
@@ -124,13 +123,12 @@ parseFloat();
     4.返回该中间对象,也就是返回了实例对象
     
 # 2019.04.28 全人健康
------
 1.在jQuery中，$符如何定义
 
     $符为jq为select
     
 # 2019.05.05 文谷（前）
-------
+
 1.webpack配置文件webpack.congfig.js的各项属性
 
     devtools：打包模式
@@ -141,3 +139,95 @@ parseFloat();
     module-rules-use-loader：所用依赖
     resolve-alias：路径指代
     devServer：本地服务器设置
+    
+2.vue常用
+
+    v-for
+    v-on = @
+    v-bind = :
+    v-model (双向绑定)
+    组件 components
+    自定义命令 
+    
+    
+# 2019.05.16 立方 (已入职)
+
+### rem
+
+- rem是css3新增长度单位，是指对根元素html和font-size计算值的大小
+- 简单理解为屏幕宽度百分比
+- rem和em相似，但是em相对于父元素的大小设置，rem相对于根元素html的字体大小设置
+
+#### rem对常用单位的优点
+
+- 相对于px来说，px的大小直接设定死，兼容性很差，rem可以通过js直接控制
+根元素font-size来设置，兼容性更好。
+- 相对于em来说，em是针对父元素设置，层级越多，越麻烦，rem的参照物为根元素，更加简明
+- 相对于vh vw 来说，浏览器兼容性更好，更加适用于字体（vh vw可能更加适合容器宽高）
+
+#### rem兼容程度
+
+- 支持`ie`9+，`firefox`3.6+，`chrome`4.0+，`opera`15.0+，`safari`4.1+，`Android Borwser`2.1+，`Android Chrome`18.0+
+
+
+#### rem布局常用脚本
+
+```js
+//具体数值根据设计稿定制
+$(function() {
+  var thisScreenWidth = $(window).width();
+  if(thisScreenWidth < 1200){
+      thisScreenWidth = 1200;
+  }
+  var thisFontSize = 16 * (thisScreenWidth/1366)+'px';
+  $("html").css("font-size",thisFontSize);
+  $(window).resize(function() {
+      var thisWidth = $(window).width();
+      if(thisWidth < 1200){
+          thisWidth = 1200;
+      }
+      var thisSize = 16 * (thisWidth/1366)+'px';
+      $("html").css('font-size',thisSize);
+  })
+})
+```
+
+### 接口基本格式（jq ajax）
+
+#### 路径包
+```js
+let url = {
+    pageName:{//页面名称
+        functionName:"",//功能路径
+        // ...
+    },
+    // ... 
+}
+```
+
+#### 数据包格式
+```js
+let Interface = {
+    url:url.pageName.functionName,
+    data:{
+        //数据格式参照各个接口文档
+    }
+}
+```
+
+#### 接口格式
+```js
+$.ajax({
+    url:Interface.url,
+    // ...
+    data:Interface.data,
+    success:function(res) {
+      // ...
+    },
+    error:function(e) {
+      console.log(e);
+    }
+})
+```
+
+    
